@@ -1,3 +1,5 @@
 {
-    "python.pythonPath": "C:\\Users\\Ridikc\\anaconda3\\python.exe"
+    "java.project.sourcePaths": [
+        "Clase 01/ejercicios/src"
+    ]
 }
