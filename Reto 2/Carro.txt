@@ -1,0 +1,26 @@
+
+public class Carro {
+    //Constantes 
+    private static final double PESO=10.0;
+    private static final double TAMANO=4.5;
+    private static final double PRECIO_BASE=1000.0;
+
+    //Atributos
+    private double peso;
+    private double tamanio;
+    private double precioBase;
+
+    //Constructor 
+    public Carro (double peso, double tamanio, double precioBase){
+        this.peso=peso;
+        this.tamanio=tamanio;
+        this.precioBase=precioBase;
+    }
+    //Metodos
+    public double calcularTotales(){
+        return 0.0;
+    }
+
+    
+    
+}

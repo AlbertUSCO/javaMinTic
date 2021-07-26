@@ -1,5 +1,6 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
@@ -26,6 +27,22 @@ public class App {
                 System.out.println("nombre = " + rs.getString("first_name"));
             }
 
+            statement.executeUpdate("drop table if exists misiontic");
+            statement.executeUpdate("create table misiontic (id integer, name string)");
+            statement.executeUpdate("insert into misiontic values(1, 'Ciclo1')");
+            statement.executeUpdate("insert into misiontic values(2, 'Ciclo2')");
+
+            PreparedStatement ps = connection.prepareStatement("insert into misiontic values(?, ?)");
+            ps.setInt(1, 3);
+            ps.setString(2, "Ciclo3");
+            ps.executeUpdate();
+
+            ResultSet consulta = statement.executeQuery("Select * FROM misiontic");
+            while(consulta.next()){
+                //read the result set 
+                System.out.println("name ="+ consulta.getString("name"));
+                System.out.println("id = " + consulta.getInt("id"));
+            }
             }
             catch (Exception e) {
                 //TODO: handle exception

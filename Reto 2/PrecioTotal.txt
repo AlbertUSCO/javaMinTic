@@ -1,0 +1,22 @@
+public class PrecioTotal {
+    //Atributos
+    private double totalPrecios;
+    private double totalVolqueta;
+    private double totalCarroNascar;
+    private Carro  carro;
+    //Constructor
+    public PrecioTotal(double totalPrecios, double totalVolqueta, double totalCarroNascar){
+        this.totalPrecios = totalPrecios;
+        this.totalVolqueta = totalVolqueta;
+        this.totalCarroNascar = totalCarroNascar;
+        
+    }
+    //Metodos
+    public void calcularTotales(){
+
+    }
+    public void mostrarTotales(){
+
+    }
+
+}
